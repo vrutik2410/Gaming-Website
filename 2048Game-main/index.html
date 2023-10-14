@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="code.js" charset="UTF-8"></script>
+    <title>2048by</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="Box-Score-Title">
+            <div class="Container-Title">
+                <div class="title"> 2048 </div>
+            </div>
+            <div class="container-score-button">
+                    <div class="container-Button">
+                        <div class="NewGame" onclick="newgame()">New game</div>
+                    </div>
+                    <div class="container-score"> 
+                        <div class="Container-Points">
+                            <div class="score-title"> POINTS</div>
+                            <div id="sumpieces" class="current-score">0</div>
+                        </div>
+                        <div class="Container-Points">
+                            <div class="score-title">MEJOR</div>
+                            <div id="Best" class="current-score">0</div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="column">
+                <div id="0-0" class="box"></div> 
+                <div id="1-0" class="box"></div>
+                <div id="2-0" class="box"></div> 
+                <div id="3-0" class="box"></div>
+            </div>
+            <div class="column">
+                <div id="0-1" class="box"></div> 
+                <div id="1-1" class="box"></div>
+                <div id="2-1" class="box"></div> 
+                <div id="3-1" class="box"></div>
+            </div>
+            <div class="column">
+                <div id="0-2" class="box"></div> 
+                <div id="1-2" class="box"></div>
+                <div id="2-2" class="box"></div> 
+                <div id="3-2" class="box"></div>
+            </div>
+            <div class="column">
+                <div id="0-3" class="box"></div> 
+                <div id="1-3" class="box"></div>
+                <div id="2-3" class="box"></div> 
+                <div id="3-3" class="box"></div>
+            </div>
+        </div>
+
+
+
+
+        <div ><h1 class="texts">Total movements: <span id="totalmov">0</span></h1></div>
+        
+        <div  class="containerClockText">
+            <h1 class="texts">time used : <span id="time"></span></h1>
+           <div class="containerClock">
+                <div class="clock" id="minutes">00</div>
+		        <div class="clock" id="seconds">:00</div>
+            </div>
+            <div id="result"></div> 
+        </div>
+        
+        
+    </div>
+    
+    <script src="code.js"></script>
+</body>
+</html>
