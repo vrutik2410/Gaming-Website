@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gaming Dashboard</title>
+    <style>
+        body {
+            background-image: url('your-background-image-url');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+
+
+        .slideshow .text {
+            position: absolute;
+            bottom: 0;
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .slideshow-container img {
+            display: none;
+            width: 100%;
+            height: 450px;
+        }
+
+        .slideshow-container img.active {
+            display: block;
+        }
+
+        
+
+        .slideshow-container.dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            max-width: 300px; /* Set the maximum width */
+            max-height: 10px; 
+        }
+
+        .slideshow-container .dot.active {
+            background-color: #717171;
+        }
+
+        .info {
+            padding: 20px;
+            color: #181717;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">Homepage</a>
+        <a href="game.html">Games</a>
+        <a href="#">Contact Us</a>
+    </div>
+    
+
+    <div class="slideshow-container">
+        <img class="slides active" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt0_2rR-qyLwdiuQY-HpTdK5rHZ_4tofVnow&usqp=CAU" alt="Image 1">
+        <img class="slides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxZj7hHjLZJzM0ltri_8cMauWJzGVRXlKFfA&usqp=CAU" alt="Image 2">
+       <!-- <img class="slides" src="image3.jpg" alt="Image 3">
+        <img class="slides" src="image4.jpg" alt="Image 4">
+        <img class="slides" src="image5.jpg" alt="Image 5">-->
+    
+        
+    
+        <div style="text-align: center;">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <!--<span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>-->
+        </div>
+      </div>
+      <div class="info">
+        <p>Welcome to our gaming website! At our platform, we specialize in creating and developing engaging games that are perfect for your arcade time. Our primary focus is to provide you with thoughtful games that not only entertain but also offer a valuable use of your free time.</p>
+        <p>
+            We believe that gaming can be more than just entertainment; it can also be an opportunity to sharpen your brain and enhance your mental abilities. That's why we carefully design our games to challenge your skills, stimulate your thinking, and promote mental health and intelligence.
+        </p>
+        <p>  
+            With a diverse collection of games, including popular titles like Sudoku and 2048, we offer a range of options to cater to different preferences. Whether you enjoy strategic puzzles, mind-bending challenges, or immersive adventures, we have something for everyone.
+        </p>
+        <p>  
+            By choosing our games, you can enjoy your free time while gaining mental agility and intelligence. So, get ready to embark on a thrilling journey of entertainment, brain training, and personal growth. Start playing our games today and unlock the full potential of your gaming experience.</p>
+    </div>
+      <footer>
+          &copy; 2023 Gaming Website. All rights reserved.
+      </footer>
+
+
+      <script>
+        var slideIndex = 0;
+        showSlides();
+    
+        function showSlides() {
+          var slides = document.getElementsByClassName("slides");
+          var dots = document.getElementsByClassName("dot");
+          for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+      </script>
+
+</body>
+</html>
